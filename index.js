@@ -18,8 +18,18 @@ function reduceToTotal (arr, start=0) {
     return arr.reduce((a, c)=>  a + c, start)
 }
 
-function reduceToAllTrue (arr) {
-    return arr.filter(x => !!x);
-}
+function reduceToAllTrue(src) {
+    for (let i = 0; i < src.length; i++ ) {
+      if (!src[i]) return false
+    }
+    return true
+  }
+  
+  function reduceToAnyTrue(src) {
+    for (let i = 0; i < src.length; i++ ) {
+      if (src[i]) return true
+    }
+    return false
+  }
 
 sourceArray = [1, 2, true, "razmatazz", false]
